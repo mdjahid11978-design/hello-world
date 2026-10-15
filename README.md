@@ -1,14 +1,14 @@
 # Hello World
 
-A fully upgraded Next.js 14 + TypeScript + Tailwind CSS starter.
+A clean, production-ready Next.js 14 + TypeScript + Tailwind CSS starter.
 
 ## Features
 
-- Next.js App Router
-- TypeScript strict mode
+- Next.js App Router with React Server Components
+- Strict TypeScript
 - Tailwind CSS
-- ESLint + Prettier
 - API route (`/api/hello`)
+- ESLint + Prettier
 - GitHub Actions CI
 - Vercel-ready
 
@@ -24,3 +24,7 @@ Open http://localhost:3000.
 ## API
 
 - `GET /api/hello` → `{ "message": "Hello, world!" }`
+
+## Deploy
+
+Push to `main` and Vercel deploys automatically (once the project is linked).

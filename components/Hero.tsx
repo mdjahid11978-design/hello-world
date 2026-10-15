@@ -1,23 +1,32 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 export default function Hero() {
-  const [message, setMessage] = useState("Hello, world!");
-
-  useEffect(() => {
-    fetch("/api/hello")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message))
-      .catch(() => setMessage("Hello, world!"));
-  }, []);
-
   return (
-    <section className="flex flex-col items-center justify-center min-h-[70vh] text-center px-4">
-      <h1 className="text-5xl font-extrabold tracking-tight">{message}</h1>
-      <p className="mt-4 text-gray-400 max-w-md">
-        A fully upgraded Next.js + TypeScript + Tailwind starter, ready for Devin to build on.
+    <section className="mx-auto max-w-5xl px-4 py-24 text-center">
+      <p className="mb-4 inline-block rounded-full border border-gray-200 px-3 py-1 text-xs font-medium text-gray-600">
+        Next.js 14 · TypeScript · Tailwind CSS
       </p>
+      <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl">
+        Build faster with a clean foundation
+      </h1>
+      <p className="mx-auto mt-6 max-w-xl text-lg text-gray-600">
+        A production-ready starter with App Router, strict TypeScript, Tailwind,
+        API routes, CI, and Vercel deployment — ready to extend.
+      </p>
+      <div className="mt-8 flex items-center justify-center gap-4">
+        <a
+          href="https://github.com/mdjahid11978-design/hello-world"
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-lg bg-gray-900 px-6 py-3 text-sm font-semibold text-white hover:bg-gray-800"
+        >
+          View on GitHub
+        </a>
+        <a
+          href="/api/hello"
+          className="rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold hover:bg-gray-50"
+        >
+          Try the API
+        </a>
+      </div>
     </section>
   );
 }
